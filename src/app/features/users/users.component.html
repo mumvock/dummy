@@ -1,0 +1,54 @@
+<div class="row">
+  <p-card
+    class="col-md-1 text-center mb-4 d-flex"
+    styleClass="d-flex flex-column justify-content-between">
+    <p-header  style="display: contents">
+      <i class="pi pi-user-plus" style="font-size: 10rem; margin-left: -1.4rem;"></i>
+      <span class="ui-card-title d-block" style="white-space: break-spaces">
+        Add a new user
+      </span>
+    </p-header>
+    <hr>
+    <p-button 
+      label="New" 
+      icon="pi pi-plus" 
+      iconPos="right" 
+      (onClick)="newUser()">
+    </p-button>
+  </p-card>
+
+  <p-card 
+    class="col-md-1 text-center mb-4 d-flex"
+    styleClass="d-flex flex-column justify-content-between"
+    *ngFor="let employee of employees">
+    <p-header>
+      <i class="pi pi-user"></i>
+      <span class="ui-card-title d-block" style="white-space: break-spaces">
+        {{ employee.employee_name }}
+      </span>
+    </p-header>
+    <span class="ui-card-subtitle">
+      {{ employee.employee_age }} years
+    </span>
+    <span>
+      {{ employee.employee_salary | currency }}
+    </span>
+    <hr>
+    <div class="row">
+      <p-button 
+        label="Edit" 
+        icon="pi pi-pencil" 
+        iconPos="right" 
+        class="ml-auto"
+        styleClass="ui-button-secondary"
+        (onClick)="editUser(employee.id)">
+      </p-button>
+      <p-button 
+        icon="pi pi-trash" 
+        class="mr-auto ml-1"
+        styleClass="ui-button-danger"
+        (onClick)="manageUsers('delete', employee.id)">
+      </p-button>
+    </div>
+  </p-card>
+</div>

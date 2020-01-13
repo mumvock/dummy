@@ -1,0 +1,17 @@
+@import 'src/assets/scss/variables';
+nav {
+  box-shadow: 0 0px 3px 0 rgba(0,0,0,.2);
+  img {
+    width: 50px;
+    margin-right: .5rem;
+  }
+  a {
+    color: $primaryColor;
+    font-size: 1.5rem;
+  }
+}
+:host {
+  ::ng-deep .ui-state-active {
+    background-color: #eaeaea;
+  }
+}

@@ -1,0 +1,23 @@
+<nav class="d-flex align-items-center p-3">
+
+  <a class="d-flex align-items-center" routerLink="">
+    <img src="assets/image/dummy_logo_navbar.png" alt="Dummy logo">
+    Dummy
+  </a>
+
+  <p-menubar 
+    class="ml-auto" 
+    styleClass="d-flex align-items-center" 
+    [model]="menuItems">
+    <button 
+      pButton 
+      label="Sign In" 
+      icon="pi pi-sign-in" 
+      style="margin-left:.25em" 
+      pTooltip="Coming soon..."
+      tooltipPosition="bottom"
+      disabled>
+    </button>
+  </p-menubar>
+
+</nav>
